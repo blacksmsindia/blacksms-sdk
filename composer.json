@@ -1,0 +1,35 @@
+{
+    "name": "blacksms/laravel",
+    "description": "Official PHP & Laravel SDK for BlackSMS API platform (SMS OTP, WhatsApp OTP, Quick SMS, Bulk SMS)",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "blacksms",
+        "laravel",
+        "php",
+        "sms",
+        "otp",
+        "whatsapp-otp",
+        "bulk-sms"
+    ],
+    "autoload": {
+        "psr-4": {
+            "BlackSMS\\": "php/src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "BlackSMS\\Laravel\\BlackSMSServiceProvider"
+            ],
+            "aliases": {
+                "BlackSMS": "BlackSMS\\Laravel\\Facades\\BlackSMS"
+            }
+        }
+    },
+    "require": {
+        "php": ">=7.4",
+        "ext-curl": "*",
+        "ext-json": "*"
+    }
+}
