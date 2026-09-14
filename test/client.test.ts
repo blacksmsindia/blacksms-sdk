@@ -22,7 +22,7 @@ describe('BlackSMS SDK Client', () => {
     });
 
     const res = await client.otp.sendSms({
-      senderId: 'TESTSND',
+      senderId: 1,
       variablesValues: '654321',
       numbers: '9876543210',
       route: 1
@@ -38,7 +38,7 @@ describe('BlackSMS SDK Client', () => {
 
     const body = JSON.parse(init.body);
     expect(body).toEqual({
-      sender_id: 'TESTSND',
+      sender_id: 1,
       variables_values: '654321',
       numbers: '9876543210',
       route: 1

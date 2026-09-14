@@ -54,7 +54,7 @@ class BlackSMS:
         numbers: Union[str, List[str]],
         code: Optional[str] = None,
         variables_values: Optional[str] = None,
-        sender_id: Optional[str] = None,
+        sender_id: Optional[Union[str, int]] = None,
         route: int = 1
     ) -> Dict[str, Any]:
         """Send SMS OTP."""

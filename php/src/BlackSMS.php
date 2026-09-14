@@ -8,9 +8,10 @@ class BlackSMS
 {
     protected string $apiKey;
     protected string $baseUrl;
-    protected ?string $defaultSenderId;
+    /** @var string|int|null */
+    protected $defaultSenderId;
 
-    public function __construct(string $apiKey, string $baseUrl = 'https://blacksms.in', ?string $defaultSenderId = null)
+    public function __construct(string $apiKey, string $baseUrl = 'https://blacksms.in', $defaultSenderId = null)
     {
         if (empty($apiKey)) {
             throw new Exception('BlackSMS API key cannot be empty.');

@@ -50,7 +50,7 @@ const client = new BlackSMS({
 
 ```typescript
 const response = await client.otp.sendSms({
-  senderId: 'MYBRAND',
+  senderId: 1, // Your numeric Sender ID from BlackSMS dashboard (e.g., 1, 2, 10)
   variablesValues: '482910', // OTP code
   numbers: '9876543210',
   route: 1
@@ -64,7 +64,7 @@ console.log(response);
 
 ```typescript
 const response = await client.otp.sendWhatsApp({
-  senderId: 'MYBRAND',
+  senderId: 1,
   variablesValues: '482910',
   numbers: '9876543210',
   route: 1

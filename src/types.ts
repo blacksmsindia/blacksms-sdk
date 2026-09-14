@@ -35,14 +35,14 @@ export interface BlackSMSClientOptions {
  */
 export interface OtpSendParams {
   /**
-   * Registered Sender ID in your BlackSMS account.
+   * Registered Sender ID in your BlackSMS account (e.g. 1, 2, 10 or string ID).
    */
-  senderId?: string;
+  senderId?: string | number;
 
   /**
    * Raw parameter alias for senderId.
    */
-  sender_id?: string;
+  sender_id?: string | number;
 
   /**
    * The variable values / OTP code (e.g., "123456").
@@ -96,14 +96,14 @@ export interface OtpSendResponse {
  */
 export interface QuickSmsSendParams {
   /**
-   * Registered Sender ID in your BlackSMS account.
+   * Registered Sender ID in your BlackSMS account (e.g. 1, 2, 10 or string ID).
    */
-  senderId?: string;
+  senderId?: string | number;
 
   /**
    * Raw parameter alias for senderId.
    */
-  sender_id?: string;
+  sender_id?: string | number;
 
   /**
    * SMS text message content.

@@ -44,7 +44,7 @@ app.post('/api/send-otp', async (req, res) => {
 
     // 1. Send SMS OTP
     const result = await blackSms.otp.sendSms({
-      senderId: 'MYBRAND',
+      senderId: 1, // Your numeric Sender ID from BlackSMS dashboard (e.g. 1, 2, 10)
       variablesValues: otpCode,
       numbers: phone,
       route: 1
